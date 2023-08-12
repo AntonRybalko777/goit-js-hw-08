@@ -9,14 +9,9 @@ const formValue = {
 };
 form.addEventListener('input', throttle(handlerInput, 500));
 
-function handlerInput(evt) {
-  if (evt.target.name === 'email') {
-    formValue.email = evt.target.value;
-    formValue.message = form.elements.message.value;
-  } else {
-    formValue.message = evt.target.value;
-    formValue.email = form.elements.email.value;
-  }
+function handlerInput() {
+  formValue.email = form.elements.email.value;
+  formValue.message = form.elements.message.value;
 
   localStorage.setItem(key, JSON.stringify(formValue));
 }
