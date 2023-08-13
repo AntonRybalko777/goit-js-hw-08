@@ -26,8 +26,7 @@ form.addEventListener('submit', handlerSubmit);
 
 function handlerSubmit(evt) {
   evt.preventDefault();
-  console.log('email:', evt.currentTarget.elements.email.value);
-  console.log('message:', evt.currentTarget.elements.message.value);
+  console.log(formValue);
   evt.currentTarget.reset();
   localStorage.removeItem(key);
   formValue.email = '';
