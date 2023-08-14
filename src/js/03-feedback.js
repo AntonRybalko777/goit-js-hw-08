@@ -26,9 +26,9 @@ form.addEventListener('submit', handlerSubmit);
 
 function handlerSubmit(evt) {
   evt.preventDefault();
-  console.log(formValue);
+  console.log(parsedValue);
   evt.currentTarget.reset();
-  localStorage.removeItem(key);
   formValue.email = '';
   formValue.message = '';
+  localStorage.removeItem(key);
 }
